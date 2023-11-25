@@ -4,10 +4,8 @@ A module providing a simple dice game.
 The purpose of this module is to show off a slightly longer function that
 could benefit from being broken up into smaller functions.
 
-Author: YOUR NAME HERE
-Date: THE DATE HERE
-
-HELLO BABY THIS IS A TEST!
+Author: Bryan Ruiz
+Date: 11/25/2023
 """
 import random
 
