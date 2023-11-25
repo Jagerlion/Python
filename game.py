@@ -37,3 +37,5 @@ def roll_off(handicap1,handicap2):
     # Determine result
     print('Player 1 got '+str(sum1)+'; Player 2 got '+str(sum2)+'.')
     return sum1 > sum2
+
+# making a test currently
