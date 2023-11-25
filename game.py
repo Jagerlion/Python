@@ -25,13 +25,13 @@ def roll_off(handicap1,handicap2):
     Precondition: handicap2 is a number
     """
     # Player 1 computes score
-    die1 = random.randint(1,6)
-    die2 = random.randint(1,6)
-    sum1 = die1+die2+handicap1
+    # die1 = random.randint(1,6)
+    # die2 = random.randint(1,6)
+    sum1 = rollem(1, 6)+handicap1
 
     # Player 2 computes score
-    die1 = random.randint(1,6)
-    die2 = random.randint(1,6)
+    # die1 = random.randint(1,6)
+    # die2 = random.randint(1,6)
     sum2 = die1+die2+handicap2
 
     # Determine result
