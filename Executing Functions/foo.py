@@ -1,5 +1,5 @@
 """
-A module with two functions, one calling the other
+A module with two functions, one calling the other.
 
 Author: Walker M. White
 Date: February 14, 2019
