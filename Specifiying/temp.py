@@ -1,5 +1,5 @@
 """
-Conversion functions for Fahrenheit and Celsius
+Conversion functions between Fahrenheit and Celsius
 
 This module shows off two functions for converting temperature back and forth between fahrenheit and centigrade.
 It also shows how to use variables to represent "constants", or values that we give a name in order to remember better.
