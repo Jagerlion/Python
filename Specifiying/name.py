@@ -24,8 +24,10 @@ def last_name_first(n):
     :param n: the person's name
     :return: copy of n but in the form 'last-name', first-name'
     """
-
+    print(n)
     end_first = introcs.find_str(n, ' ')
+    print(end_first)
+
     first = n[:end_first]
     last = n[end_first + 1:]
     return last + ', ' + first
