@@ -28,8 +28,8 @@ def replace_first(word, a, b):
     Parameter b: The substring to use in place of a
     Precondition: b is a string
     """
-    pos = introcs.rfind_str(word, a)
+    pos = introcs.find_str(word, a)
     before = word[:pos]
-    after = word[pos + 1:]
+    after = word[pos + len(a):] # Fix made: was incrementing by one instead of length
     result = before + b + after
     return result
