@@ -35,5 +35,3 @@ def number_vowels(w):
     y = introcs.count_str(w[1:],'y')
 
     return a+e+i+o+u+y
-
-
