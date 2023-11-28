@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a4d55f6d-1dba-4d92-9a8c-91f7d553b9b1" name="Changes" comment="Exercise3 of Specifications funcs and tests file pushed&#10;These have bugs within them that need to be fixed">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Python.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Defined/Desigining_Functions/Exercise1/name.py" beforeDir="false" afterPath="$PROJECT_DIR$/User Defined/Desigining_Functions/Exercise1/name.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Jagerlion&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="713a5174-1d3a-444a-b36b-2a8b001ae61a" />
+        <option name="url" value="https://github.com/Jagerlion/PythonC.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2YEOnhIgZOeXZbacxQbOVE2WUlf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ruizb/OneDrive/Programming/Python/Python/User Defined/Desigining_Functions/Exercise1/name.py&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ruizb\OneDrive\Programming\Python\User Defined\Executing_Functions" />
+      <recent name="C:\Users\ruizb\OneDrive\Programming\Python\User Defined\Executing Functions" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a4d55f6d-1dba-4d92-9a8c-91f7d553b9b1" name="Changes" comment="" />
+      <created>1700087440613</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700087440613</updated>
+    </task>
+    <task id="LOCAL-00001" summary="First push onto GitHub.">
+      <option name="closed" value="true" />
+      <created>1700941184208</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700941184208</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First push onto GitHub.">
+      <option name="closed" value="true" />
+      <created>1700943609344</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700943609344</updated>
+    </task>
+    <task id="LOCAL-00003" summary="First push onto GitHub.">
+      <option name="closed" value="true" />
+      <created>1700945759260</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700945759260</updated>
+    </task>
+    <task id="LOCAL-00004" summary="First push onto GitHub.">
+      <option name="closed" value="true" />
+      <created>1700946202396</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700946202396</updated>
+    </task>
+    <task id="LOCAL-00005" summary="First push onto GitHub.">
+      <option name="closed" value="true" />
+      <created>1700946550768</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700946550768</updated>
+    </task>
+    <task id="LOCAL-00006" summary="First push onto GitHub.">
+      <option name="closed" value="true" />
+      <created>1700946601358</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700946601358</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Opt file push">
+      <option name="closed" value="true" />
+      <created>1701019351871</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701019351871</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Directory changes. Exercise5/func.py has been updated to final version.">
+      <option name="closed" value="true" />
+      <created>1701022004122</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701022004122</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Directory changes. Exercise5/func.py has been updated to final version.">
+      <option name="closed" value="true" />
+      <created>1701022122497</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701022122497</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Created proc.py under Specifiying directory. Also created the proc file, not completed.">
+      <option name="closed" value="true" />
+      <created>1701024733820</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701024733820</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Completed the temp.py file, conversion of Fahrenheit and Celsius.">
+      <option name="closed" value="true" />
+      <created>1701027039668</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701027039668</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Read.py created and finished. Number.txt test file created. Temp.py had a minor correction made in the dockstring description.">
+      <option name="closed" value="true" />
+      <created>1701028391070</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701028391070</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Updated bad.py to full function. Added pdf for terminology and definitions.">
+      <option name="closed" value="true" />
+      <created>1701030486460</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701030486460</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Updated bad.py. Created file name.py and test_name.py which tests the function last_name_first in name.py">
+      <option name="closed" value="true" />
+      <created>1701049350045</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1701049350045</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Funcs.py has been update and finished&#10;The tests.py script properly test the function in funcs.py">
+      <option name="closed" value="true" />
+      <created>1701054303747</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1701054303747</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Sub directory exercise2 was created for our own version&#10;of tests.py and funcs.py">
+      <option name="closed" value="true" />
+      <created>1701065678281</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1701065678281</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Updated tests.py in exercise2 of previous commit. Almost completed, need to finish y vowel test.">
+      <option name="closed" value="true" />
+      <created>1701070120847</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1701070120847</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Finished tests.py under exercise2&#10;Updated funcs.py y vowel function, minor bug">
+      <option name="closed" value="true" />
+      <created>1701103280684</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1701103280684</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Updated Test_name and name.py">
+      <option name="closed" value="true" />
+      <created>1701105027926</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1701105027926</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Exercise3 of Specifications funcs and tests file pushed&#10;These have bugs within them that need to be fixed">
+      <option name="closed" value="true" />
+      <created>1701105695418</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1701105695418</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First push onto GitHub." />
+    <MESSAGE value="Opt file push" />
+    <MESSAGE value="Directory changes. Exercise5/func.py has been updated to final version." />
+    <MESSAGE value="Created proc.py under Specifiying directory. Also created the proc file, not completed." />
+    <MESSAGE value="Completed the temp.py file, conversion of Fahrenheit and Celsius." />
+    <MESSAGE value="Read.py created and finished. Number.txt test file created. Temp.py had a minor correction made in the dockstring description." />
+    <MESSAGE value="Updated bad.py to full function. Added pdf for terminology and definitions." />
+    <MESSAGE value="Updated bad.py. Created file name.py and test_name.py which tests the function last_name_first in name.py" />
+    <MESSAGE value="Funcs.py has been update and finished&#10;The tests.py script properly test the function in funcs.py" />
+    <MESSAGE value="Sub directory exercise2 was created for our own version&#10;of tests.py and funcs.py" />
+    <MESSAGE value="Updated tests.py in exercise2 of previous commit. Almost completed, need to finish y vowel test." />
+    <MESSAGE value="Finished tests.py under exercise2&#10;Updated funcs.py y vowel function, minor bug" />
+    <MESSAGE value="Updated Test_name and name.py" />
+    <MESSAGE value="Exercise3 of Specifications funcs and tests file pushed&#10;These have bugs within them that need to be fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise3 of Specifications funcs and tests file pushed&#10;These have bugs within them that need to be fixed" />
+  </component>
+</project>
