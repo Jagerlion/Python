@@ -25,11 +25,14 @@ def last_name_first(n):
     :return: copy of n but in the form 'last-name', first-name'
     """
 
-    # print(n)
+    # Find the space(s) between the two names
     end_first = introcs.find_str(n,' ')
-    # print(end_first)
+    # get the first name
+    # first = n[:end_first]
 
-    first = n[:end_first]
-    last = introcs.strip(n[end_first + 1:])
+    # get the last name
+    # put them together with a comma
 
-    return last + ', ' + firstd
+    # last = introcs.strip(n[end_first + 1:])
+
+    pass
