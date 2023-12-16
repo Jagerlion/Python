@@ -6,23 +6,23 @@ Date: 12/11/2023
 """
 import introcs
 
-def exchange(currency_from, currency_to, amount_from):
+def before_space(s):
     """
-    Returns: amount of currency received in the given exchange.
+    Returns: Substring s up to, but not including the first space
+    
 
-    In this exchange, the user is changing amount_from money in currency currency_from to the currency_to. The value
-    returned represents the amount in the currency currency_to.
+    Parameter s: the string to slice
+    Precondition: s has at least one space in it    
+    """
 
-    The value returned has type float.
+    pass
 
-    Parameter currency_from: the currency on hand
-    Precondition: currency_from is a string
-
-    Parameter currency_to: the currency on hand
-    Precondition: currency_to is a string
-
-    Parameter amount_from: the currency on hand
-    Precondition: amount_from is a string
+def after_space(s):
+    """
+    Returns: Substring of s after first space
+    
+    Parameter s: the string to slice
+    Perecondition: s has at least one space in it
     """
 
     pass
