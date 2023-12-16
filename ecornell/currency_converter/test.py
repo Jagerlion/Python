@@ -12,5 +12,8 @@ def test_before_space():
     """
     Test function before_space()
     """
-    
+
     print("Testing function before_spac")
+
+test_before_space()
+print('All tests completed successfully')
