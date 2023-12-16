@@ -6,4 +6,11 @@ Date: 12/11/2023
 """
 
 import introcs
+import exchange
 
+def test_before_space():
+    """
+    Test function before_space()
+    """
+    
+    print("Testing function before_spac")
