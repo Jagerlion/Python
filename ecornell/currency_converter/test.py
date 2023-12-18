@@ -18,4 +18,18 @@ def test_before_space():
 test_before_space()
 print('All tests completed successfully')
 
-#tesst edit test again
+
+
+"""
+Build test cases for the following
+
+before_space
+after_space
+first_inside_quotes
+get_src
+get_dst
+has_error
+service_response
+iscurrency
+exchange
+"""

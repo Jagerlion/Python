@@ -1,3 +1,16 @@
 3QQ4lj7Xif2fXphELw8AERBvzN1jJi3gB0JAIsUPDuEe expires may 27, 2024
 
 Pass key for currency converter
+
+
+before_space
+after_space
+first_inside_quotes
+get_src
+get_dst
+has_error
+service_response
+iscurrency
+exchange
+
+These are the functions needed and for test
