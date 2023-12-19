@@ -1,26 +1,13 @@
 """
-A Module to test the currency converter
+Unit tests for module currency
+
+When run as a script, this module invokes several procedures that test
+the various functions in the module currency.
 
 Author: Bryan Ruiz
-Date: 12/11/2023
-"""
-
-import introcs
-import exchange
-
-def test_before_space():
-    """
-    Test function before_space()
-    """
-
-    print("Testing function before_spac")
-
-test_before_space()
-print('All tests completed successfully')
+Date: 12/19/2023
 
 
-
-"""
 Build test cases for the following
 
 before_space
@@ -33,3 +20,22 @@ service_response
 iscurrency
 exchange
 """
+
+
+import introcs
+import currency
+import exchange
+
+def test_before_space():
+    """
+    Test function before_space()
+    """
+
+    print("Testing function before_spac")
+
+test_before_space()
+
+
+print('All tests completed successfully')
+
+
