@@ -25,6 +25,10 @@ def before_space(s):
     Parameter s: the string to slice
     Precondition: s is a string with at least one space in it
     """
+
+    assert type(s) == str, 'The value ' + repr(s) + ' is not a string.'
+    assert introcs.count_str(s,' ') >= 1, 'The string '+repr(s)+' does not have at least one space.'
+
     first = introcs.find_str(s, ' ')
     result = s[:first]
 
@@ -40,7 +44,10 @@ def after_space(s):
     Parameter s: the string to slice
     Precondition: s is a string with at least one space in it
     """
+    assert type(s) == str, 'The value ' + repr(s) + ' is not a string.'
+    assert introcs.count_str(s,' ') >= 1, 'The string '+repr(s)+' does not have at least one space.'
+
     first = introcs.find_str(s, ' ')
-    result = s[first:]
+    result = s[first + 1:]
 
     return result
