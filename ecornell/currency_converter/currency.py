@@ -33,10 +33,14 @@ def before_space(s):
 
 def after_space(s):
     """
-    Returns: Substring of s after first space
-    
-    Parameter s: the string to slice
-    Precondition: s has at least one space in it
-    """
+    Returns the substring of s after the first space
 
-    pass
+    Example: after_space('Hello World') returns 'World'
+
+    Parameter s: the string to slice
+    Precondition: s is a string with at least one space in it
+    """
+    first = introcs.find_str(s, ' ')
+    result = s[first:]
+
+    return result
