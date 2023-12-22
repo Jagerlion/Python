@@ -24,8 +24,11 @@ def before_space(s):
     Parameter s: the string to slice
     Precondition: s is a string with at least one space in it
     """
+    first = introcs.find_str(s,' ')
+    result = s[:first]
 
-    pass
+    return result
+
 
 def after_space(s):
     """
