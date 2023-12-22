@@ -9,11 +9,12 @@ Author: Bryan Ruiz
 Date: 12/11/2023
 """
 
-#passkey 3QQ4lj7Xif2fXphELw8AERBvzN1jJi3gB0JAIsUPDuEe
+# passkey 3QQ4lj7Xif2fXphELw8AERBvzN1jJi3gB0JAIsUPDuEe
 
 import introcs
 
 APIKEY = '3QQ4lj7Xif2fXphELw8AERBvzN1jJi3gB0JAIsUPDuEe'
+
 
 def before_space(s):
     """
@@ -24,7 +25,7 @@ def before_space(s):
     Parameter s: the string to slice
     Precondition: s is a string with at least one space in it
     """
-    first = introcs.find_str(s,' ')
+    first = introcs.find_str(s, ' ')
     result = s[:first]
 
     return result
