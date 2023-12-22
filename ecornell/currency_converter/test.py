@@ -30,6 +30,20 @@ def test_before_space():
     """
     Test procedure for before_space
     """
+    result = currency.before_space('Hello World')
+    introcs.assert_equals('Hello',result)
+
+    result = currency.before_space(' Hello')
+    introcs.assert_equals('',result)
+
+    result = currency.before_space('Hello ')
+    introcs.assert_equals('Hello',result)
+
+    result = currency.before_space('Hello World ')
+    introcs.assert_equals('Hello',result)
+
+    result = currency.before_space('Hello  Wor  ld ')
+    introcs.assert_equals('Hello',result)
 
     print("Testing before_space")
 

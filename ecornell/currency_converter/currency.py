@@ -17,11 +17,12 @@ APIKEY = '3QQ4lj7Xif2fXphELw8AERBvzN1jJi3gB0JAIsUPDuEe'
 
 def before_space(s):
     """
-    Returns: Substring s up to, but not including the first space
-    
+    Returns the substring of s up to, but not including, the first space.
+
+    Example: before_space('Hello World') returns 'Hello'
 
     Parameter s: the string to slice
-    Precondition: s has at least one space in it    
+    Precondition: s is a string with at least one space in it
     """
 
     pass
