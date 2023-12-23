@@ -52,7 +52,6 @@ def test_after_space():
     """
     Test procedure for after_space
     """
-    print("Testing after_space")
 
     result = currency.after_space('Hello World')
     introcs.assert_equals('World',result)
@@ -76,6 +75,10 @@ def test_first_inside_quotes():
     """
     Test procedure for first_inside_quotes
     """
+
+    result = currency.after_space('Hello World')
+    introcs.assert_equals('World',result)
+
     print("Testing first_inside_quotes")
 
 
