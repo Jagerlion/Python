@@ -27,7 +27,7 @@ def before_space(s):
     """
 
     assert type(s) == str, 'The value ' + repr(s) + ' is not a string.'
-    assert introcs.count_str(s,' ') >= 1, 'The string '+repr(s)+' does not have at least one space.'
+    assert introcs.count_str(s, ' ') >= 1, 'The string ' + repr(s) + ' does not have at least one space.'
 
     first = introcs.find_str(s, ' ')
     result = s[:first]
@@ -45,12 +45,13 @@ def after_space(s):
     Precondition: s is a string with at least one space in it
     """
     assert type(s) == str, 'The value ' + repr(s) + ' is not a string.'
-    assert introcs.count_str(s,' ') >= 1, 'The string '+repr(s)+' does not have at least one space.'
+    assert introcs.count_str(s, ' ') >= 1, 'The string ' + repr(s) + ' does not have at least one space.'
 
     first = introcs.find_str(s, ' ')
     result = s[first + 1:]
 
     return result
+
 
 def first_inside_quotes(s):
     """
@@ -67,12 +68,44 @@ def first_inside_quotes(s):
     Precondition: s is a string with at least two (double) quote characters inside
     """
 
+    assert type(s) == str, 'The value ' + repr(s) + ' is not a string.'
+    assert introcs.count_str(s, '"') >= 2, 'The string ' + repr(s) + ' does not have at least two double quotes.'
+
     # find first double quote position in string
-    first = introcs.find_str(s,'"')
+    first = introcs.find_str(s, '"')
     # Search for the second qutation after the first
-    second = introcs.find_str(s[first+1:],'"')
+    second = introcs.find_str(s[first + 1:], '"')
     # combining positions
-    result = s[first+1:1+second+first]
+    result = s[first + 1:1 + second + first]
 
     return result
 
+
+def get_src(json):
+    """
+    Returns the src value in the response to a currency query.
+
+    Given a JSON string provided by the web service, this function returns the string
+    inside string quotes (") immediately following the substring '"src"'. For example,
+    if the json is
+
+        '{"success": true, "src": "2 United States Dollars", "dst": "1.772814 Euros", "error": ""}'
+
+    then this function returns '2 United States Dollars' (not '"2 United States Dollars"').
+    On the other hand if the json is
+
+        '{"success":false,"src":"","dst":"","error":"Source currency code is invalid."}'
+
+    then this function returns the empty string.
+
+    The web server does NOT specify the number of spaces after the colons. The JSON
+
+        '{"success":true, "src":"2 United States Dollars", "dst":"1.772814 Euros", "error":""}'
+
+    is also valid (in addition to the examples above).
+
+    Parameter json: a json string to parse
+    Precondition: json a string provided by the web service (ONLY enforce the type)
+    """
+
+    pass
