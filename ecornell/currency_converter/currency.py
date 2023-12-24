@@ -214,6 +214,16 @@ def service_response(src,dst,amt):
     Precondition: amt is a float or int
     """
 
+    assert type(src) == str, 'The src value' + repr(json) + ' is not a string.'
+    assert introcs.isalpha(src) == True, 'src has non alphabetic characters'
+    assert len(src) > 0, 'src must be a non empty string'
+
+    assert type(dst) == str, 'The dst value' + repr(json) + ' is not a string.'
+    assert introcs.isalpha(dst) == True, 'dst has non alphabetic characters'
+    assert len(dst) > 0, 'dst must be a non empty string'
+
+
+
     url = ('https://ecpyfac.ecornell.com/python/currency/'
            'fixed?src='+src+'&dst='+dst+'&amt='+str(amt)+'&key=3QQ4lj7Xif2fXphELw8AERBvzN1jJi3gB0JAIsUPDuEe')
     result = introcs.urlread(url)
