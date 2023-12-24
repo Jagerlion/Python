@@ -235,9 +235,10 @@ def service_response(src,dst,amt):
     assert introcs.isfloat(str(amt)) or introcs.isint(str(amt)), \
         'amt is not a float or integer'
 
+    global APIKEY
 
-    url = ('https://ecpyfac.ecornell.com/python/currency/'
-           'fixed?src='+src+'&dst='+dst+'&amt='+str(amt)+'&key=3QQ4lj7Xif2fXphELw8AERBvzN1jJi3gB0JAIsUPDuEe')
+    url = (f'https://ecpyfac.ecornell.com/python/currency/'
+           'fixed?src='+src+'&dst='+dst+'&amt='+str(amt)+f'&key={APIKEY}')
     result = introcs.urlread(url)
 
     return result
