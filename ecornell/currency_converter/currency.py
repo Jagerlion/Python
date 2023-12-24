@@ -230,3 +230,14 @@ def service_response(src,dst,amt):
     result = introcs.urlread(url)
 
     return result
+
+def iscurrency(sucrrency):
+    """
+    Returns True if currency is a valid (3 letter code for a) currency.
+
+    It returns False otherwise.
+
+    Parameter currency: the currency code to verify
+    Precondition: currency is a nonempty string with only letters
+    """
+
