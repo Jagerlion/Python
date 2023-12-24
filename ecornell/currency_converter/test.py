@@ -150,6 +150,24 @@ def test_service_response():
     """
     Test procedure for service_response
     """
+
+    result = currency.service_response('USD','EUR', 2.5)
+    introcs.assert_equals('{"success": true, "src": "2.5 United States Dollars", '
+                          '"dst": "2.2160175 Euros", "error": ""}',result)
+
+    result = currency.service_response('USD','EUR',5)
+    introcs.assert_equals('{"success": true, "src": "5.0 United States Dollars", '
+                          '"dst": "4.432035 Euros", "error": ""}',result)
+
+    result = currency.service_response('AUD', 'HNL',10.05)
+    introcs.assert_equals('{"success": true, "src": "10.05 Australian Dollars", '
+                          '"dst": "174.24139150330745 Honduran Lempiras", "error": ""}',result)
+
+    result = currency.service_response('AUD','HNL', 10)
+    introcs.assert_equals('{"success": true, "src": "10.0 Australian Dollars", '
+                          '"dst": "173.37451890876363 Honduran Lempiras", "error": ""}',result)
+
+
     print("Testing service_response")
 
 

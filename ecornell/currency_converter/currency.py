@@ -214,4 +214,8 @@ def service_response(src,dst,amt):
     Precondition: amt is a float or int
     """
 
-    pass
+    url = ('https://ecpyfac.ecornell.com/python/currency/'
+           'fixed?src='+src+'&dst='+dst+'&amt='+str(amt)+'&key=3QQ4lj7Xif2fXphELw8AERBvzN1jJi3gB0JAIsUPDuEe')
+    result = introcs.urlread(url)
+
+    return result
