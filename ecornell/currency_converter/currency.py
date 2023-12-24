@@ -25,7 +25,8 @@ def before_space(s):
     """
 
     assert type(s) == str, 'The value ' + repr(s) + ' is not a string.'
-    assert introcs.count_str(s,' ') >= 1, 'The string '+repr(s)+' does not have at least one space.'
+    assert introcs.count_str(s,' ') >= 1, (
+            'The string '+repr(s)+'  does not have at least one space.')
 
 
     first = introcs.find_str(s,' ')
@@ -45,7 +46,8 @@ def after_space(s):
     """
 
     assert type(s) == str, 'The value ' + repr(s) + ' is not a string.'
-    assert introcs.count_str(s,' ') >= 1, 'The string '+repr(s)+' does not have at least one space.'
+    assert introcs.count_str(s,' ') >= 1, (
+            'The string '+repr(s)+' does not have at least one space.')
 
     first = introcs.find_str(s, ' ')
     result = s[first+1:]
@@ -68,7 +70,8 @@ def first_inside_quotes(s):
     Precondition: s is a string with at least two (double) quote characters inside
     """
     assert type(s) == str, 'The value ' + repr(s) + ' is not a string.'
-    assert introcs.count_str(s,'"') >= 2, 'The string '+repr(s)+' does not have at least two double quotes.'
+    assert introcs.count_str(s,'"') >= 2, (
+            'The string '+repr(s)+' does not have at least two double quotes.')
 
     # find first double quote position in string
     first = introcs.find_str(s,'"')
@@ -228,7 +231,8 @@ def service_response(src,dst,amt):
     assert len(dst) > 0, 'dst must be a non empty string'
 
     assert type(amt) != str, 'amt is a string and not a float or integer'
-    assert introcs.isfloat(str(amt)) or introcs.isint(str(amt)), 'amt is not a float or integer'
+    assert introcs.isfloat(str(amt)) or introcs.isint(str(amt)), \
+        'amt is not a float or integer'
 
 
     url = ('https://ecpyfac.ecornell.com/python/currency/'
@@ -247,9 +251,11 @@ def iscurrency(currency):
     Parameter currency: the currency code to verify
     Precondition: currency is a nonempty string with only letters
     """
-    assert type(currency) == str, 'The currency value' + repr(currency) + ' is not a string.'
+    assert type(currency) == str, (
+                             'The currency value' + repr(currency) + ' is not a string.')
     assert introcs.isalpha(currency) == True, 'currency has non alphabetic characters'
-    assert len(currency) > 0, 'The string '+ repr(currency) + ' must not be an empty string'
+    assert len(currency) > 0, (
+        'The string '+ repr(currency) + ' must not be an empty string')
 
     # use service_response to test  currency, using placeholder values for dst and amt
     # otherwise check will not complete and crash at service_response
