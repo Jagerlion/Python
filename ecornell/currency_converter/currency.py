@@ -241,6 +241,10 @@ def iscurrency(currency):
     Precondition: currency is a nonempty string with only letters
     """
 
+    assert type(currency) == str, 'The currency value' + repr(currency) + ' is not a string.'
+    assert introcs.isalpha(currency) == True, 'currency has non alphabetic characters'
+    assert len(currency) > 0, 'The string '+ repr(currency) + ' must not be an empty string'
+
     # use service_response to test  currency, using placeholder values for dst and amt
     # otherwise check will not complete and crash at service_response
     valid = service_response(currency, 'USD', 1)
@@ -267,6 +271,13 @@ def exchange(src, dst, amt):
     Parameter amt: amount of currency to convert
     Precondition: amt is a float or int
     """
+
+    assert iscurrency(src) == True, 'The string ' +repr(src)+ ' is not a valid currency code'
+    assert iscurrency(dst) == True, 'The string ' +repr(dst)+ ' is not a valid currency code'
+
+    assert type(amt) != str, 'amt is a string and not a float or integer'
+    assert introcs.isfloat(str(amt)) or introcs.isint(str(amt)), 'amt is not a float or integer'
+
     # get the json using service_response
     json = service_response(src, dst, amt)
     # get the dst using get_dst
