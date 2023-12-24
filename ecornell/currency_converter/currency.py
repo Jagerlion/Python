@@ -231,7 +231,7 @@ def service_response(src,dst,amt):
 
     return result
 
-def iscurrency(sucrrency):
+def iscurrency(currency):
     """
     Returns True if currency is a valid (3 letter code for a) currency.
 
@@ -241,3 +241,10 @@ def iscurrency(sucrrency):
     Precondition: currency is a nonempty string with only letters
     """
 
+    # use service_response to test  currency, using placeholder values for dst and amt
+    # otherwise check will not complete and crash at service_response
+    valid = service_response(currency, 'USD', 1)
+    # use has_error to see if one occurs, must not be true for function to complete
+    check = has_error(valid) != True
+
+    return check

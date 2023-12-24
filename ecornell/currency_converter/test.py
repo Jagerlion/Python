@@ -175,6 +175,13 @@ def test_iscurrency():
     """
     Test procedure for iscurrency
     """
+
+    result = currency.iscurrency('AUD')
+    introcs.assert_true(result)
+
+    result = currency.iscurrency('AD')
+    introcs.assert_false(result)
+
     print("Testing iscurrency")
 
 
