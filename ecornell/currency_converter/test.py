@@ -189,6 +189,16 @@ def test_exchange():
     """
     Test procedure for exchange
     """
+
+    result = currency.exchange('USD','EUR', 2.5)
+    introcs.assert_floats_equal(2.2160175,result)
+
+    result = currency.exchange('GEL','AUD', 0)
+    introcs.assert_floats_equal(0.0,result)
+
+    result = currency.exchange('GEL','AUD', -1)
+    introcs.assert_floats_equal(-0.501537323943662,result)
+
     print("Testing exchange")
 
 
