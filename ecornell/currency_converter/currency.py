@@ -118,7 +118,7 @@ def get_src(json):
 
     return substring
 
-def get_dst():
+def get_dst(json):
     """
     Returns the dst value in the response to a currency query.
 
@@ -248,3 +248,22 @@ def iscurrency(currency):
     check = has_error(valid) != True
 
     return check
+
+def exchange(src, dst, amt):
+    """
+    Returns the amount of currency received in the given exchange.
+
+    In this exchange, the user is changing amt money in currency src to the currency
+    dst. The value returned represents the amount in currency currency_to.
+
+    The value returned has type float.
+
+    Parameter src: the currency on hand
+    Precondition: src is a string for a valid currency code
+
+    Parameter dst: the currency to convert to
+    Precondition: dst is a string for a valid currency code
+
+    Parameter amt: amount of currency to convert
+    Precondition: amt is a float or int
+    """
