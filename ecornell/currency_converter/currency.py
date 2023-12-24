@@ -267,3 +267,13 @@ def exchange(src, dst, amt):
     Parameter amt: amount of currency to convert
     Precondition: amt is a float or int
     """
+    # get the json using service_response
+    json = service_response(src, dst, amt)
+    # get the dst using get_dst
+    converted = get_dst(json)
+    # get the value using before_space to ignore everything else after
+    # convert it to a float as required for this function
+    value = float(before_space(converted))
+
+    return value
+
