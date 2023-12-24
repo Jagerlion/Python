@@ -186,6 +186,7 @@ def has_error(json):
     Precondition: json a string provided by the web service (ONLY enforce the type)
     """
 
+    assert type(json) == str, 'The value ' + repr(json) + ' is not a string.'
 
     # finding substring for error
     position = introcs.index_str(json, '"error"')

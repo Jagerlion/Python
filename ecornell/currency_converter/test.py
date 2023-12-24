@@ -115,9 +115,13 @@ def test_get_dst():
                                '"dst":"1.772814 Euros", "error":""}')
     introcs.assert_equals('1.772814 Euros', result)
 
-    result = currency.get_dst('{"success":true, "src":"2 United States Dollars", '
-                               '"dst":"test", "error":""}')
-    introcs.assert_equals('test', result)
+    result = currency.get_src('{ "success": false, "src": "", "dst": "", ' +
+                              '"error": "Exchange currency code is invalid." }')
+    introcs.assert_equals('',result)
+
+    result = currency.get_src('{ "success": false, "src": "", "dst":"", ' +
+                              '"error": "Exchange currency code is invalid." }')
+    introcs.assert_equals('',result)
 
     print("Testing get_dst")
 
@@ -131,8 +135,17 @@ def test_has_error():
                                 '"error":"Source currency code is invalid."}')
     introcs.assert_true(result)
 
+    result = currency.has_error('{"success":false,"src":"","dst":"",'
+                                '"error": "Source currency code is invalid."}')
+    introcs.assert_true(result)
+
+
     result = currency.has_error('{"success": true, "src": "2 United States Dollars", '
                                 '"dst": "1.772814 Euros", "error": ""}')
+    introcs.assert_false(result)
+
+    result = currency.has_error('{"success": true, "src": "2 United States Dollars", '
+                                '"dst": "1.772814 Euros", "error":""}')
     introcs.assert_false(result)
 
     print("Testing has_error")
@@ -151,9 +164,9 @@ def test_service_response():
     introcs.assert_equals('{"success": true, "src": "5.0 United States Dollars", '
                           '"dst": "4.432035 Euros", "error": ""}',result)
 
-    result = currency.service_response('AUD','HNL', 10)
-    introcs.assert_equals('{"success": true, "src": "10.0 Australian Dollars", '
-                          '"dst": "173.37451890876363 Honduran Lempiras", "error": ""}',result)
+    result = currency.service_response('GEL','AUD', -1)
+    introcs.assert_equals('{"success": true, "src": "-1.0 Georgian Lari", '
+                          '"dst": "-0.501537323943662 Australian Dollars", "error": ""}',result)
 
     result = currency.service_response('AUD', 'HNL',10.05)
     introcs.assert_equals('{"success": true, "src": "10.05 Australian Dollars", '
