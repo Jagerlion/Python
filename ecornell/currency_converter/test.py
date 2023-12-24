@@ -99,9 +99,8 @@ def test_get_src():
                               '"dst": "1.772814 Euros", "error": ""}')
     introcs.assert_equals('2 United States Dollars',result)
 
-    result = currency.get_src('{"success":true, "src":"2 United States Dollars", '
-                               '"dst":"1.772814 Euros", "error":""}')
-    introcs.assert_equals('2 United States Dollars', result)
+    result = currency.get_src('{"success":true, "dst":"1.772814 Euros", "error":""}')
+    introcs.assert_equals('', result)
 
     result = currency.get_src('{"success":true, "src":"test", '
                                '"dst":"1.772814 Euros", "error":""}')
@@ -117,10 +116,33 @@ def test_get_dst():
     print("Testing get_dst")
 
 
+    result = currency.get_dst('{"success": true, "src": "2 United States Dollars", '
+                              '"dst": "1.772814 Euros", "error": ""}')
+    introcs.assert_equals('1.772814 Euros',result)
+
+    result = currency.get_dst('{"success":true, "src":"2 United States Dollars", '
+                               '"dst":"1.772814 Euros", "error":""}')
+    introcs.assert_equals('1.772814 Euros', result)
+
+    result = currency.get_dst('{"success":true, "src":"2 United States Dollars", '
+                               '"dst":"test", "error":""}')
+    introcs.assert_equals('test', result)
+
+    print("Testing get_dst")
+
+
 def test_has_error():
     """
     Test procedure for has_error
     """
+
+    result = currency.has_error('{"success":false,"src":"","dst":"","error":"Source currency code is invalid."}')
+    introcs.assert_true(result)
+
+    result = currency.has_error('{"success": true, "src": "2 United States Dollars", '
+                                '"dst": "1.772814 Euros", "error": ""}')
+    introcs.assert_false(result)
+
     print("Testing has_error")
 
 
