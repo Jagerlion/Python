@@ -87,8 +87,13 @@ def test_get_src():
                               '"dst": "1.772814 Euros", "error": ""}')
     introcs.assert_equals('2 United States Dollars',result)
 
-    #result = currency.get_src('{"success":true, "dst":"1.772814 Euros", "error":""}')
-    #introcs.assert_equals('', result)
+    result = currency.get_src('{ "success": false, "src": "", "dst": "", ' +
+                              '"error": "Exchange currency code is invalid." }')
+    introcs.assert_equals('',result)
+
+    result = currency.get_src('{ "success": false, "src":"", "dst": "", ' +
+                              '"error": "Exchange currency code is invalid." }')
+    introcs.assert_equals('',result)
 
     result = currency.get_src('{"success":true, "src":"test", '
                                '"dst":"1.772814 Euros", "error":""}')
@@ -106,8 +111,7 @@ def test_get_dst():
                               '"dst": "1.772814 Euros", "error": ""}')
     introcs.assert_equals('1.772814 Euros',result)
 
-    result = currTru
-    ency.get_dst('{"success":true, "src":"2 United States Dollars", '
+    result = currency.get_dst('{"success":true, "src":"2 United States Dollars", '
                                '"dst":"1.772814 Euros", "error":""}')
     introcs.assert_equals('1.772814 Euros', result)
 
