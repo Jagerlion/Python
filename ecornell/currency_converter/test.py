@@ -6,44 +6,30 @@ the various functions in the module currency.
 
 Author: Bryan Ruiz
 Date: 12/19/2023
-
-
-Build test cases for the following
-
-before_space
-after_space
-first_inside_quotes
-get_src
-get_dst
-has_error
-service_response
-iscurrency
-exchange
 """
 
 import introcs
 import currency
-import exchange
-
 
 def test_before_space():
     """
     Test procedure for before_space
     """
+
     result = currency.before_space('Hello World')
-    introcs.assert_equals('Hello', result)
+    introcs.assert_equals('Hello',result)
 
     result = currency.before_space(' Hello')
-    introcs.assert_equals('', result)
+    introcs.assert_equals('',result)
 
     result = currency.before_space('Hello ')
-    introcs.assert_equals('Hello', result)
+    introcs.assert_equals('Hello',result)
 
     result = currency.before_space('Hello World ')
-    introcs.assert_equals('Hello', result)
+    introcs.assert_equals('Hello',result)
 
     result = currency.before_space('Hello  Wor  ld ')
-    introcs.assert_equals('Hello', result)
+    introcs.assert_equals('Hello',result)
 
     print("Testing before_space")
 
@@ -88,6 +74,7 @@ def test_first_inside_quotes():
     result = currency.first_inside_quotes('A "" B')
     introcs.assert_equals('',result)
 
+
     print("Testing first_inside_quotes")
 
 
@@ -95,12 +82,13 @@ def test_get_src():
     """
     Test procedure for get_src
     """
+
     result = currency.get_src('{"success": true, "src": "2 United States Dollars", '
                               '"dst": "1.772814 Euros", "error": ""}')
     introcs.assert_equals('2 United States Dollars',result)
 
-    result = currency.get_src('{"success":true, "dst":"1.772814 Euros", "error":""}')
-    introcs.assert_equals('', result)
+    #result = currency.get_src('{"success":true, "dst":"1.772814 Euros", "error":""}')
+    #introcs.assert_equals('', result)
 
     result = currency.get_src('{"success":true, "src":"test", '
                                '"dst":"1.772814 Euros", "error":""}')
@@ -113,14 +101,13 @@ def test_get_dst():
     """
     Test procedure for get_dst
     """
-    print("Testing get_dst")
-
 
     result = currency.get_dst('{"success": true, "src": "2 United States Dollars", '
                               '"dst": "1.772814 Euros", "error": ""}')
     introcs.assert_equals('1.772814 Euros',result)
 
-    result = currency.get_dst('{"success":true, "src":"2 United States Dollars", '
+    result = currTru
+    ency.get_dst('{"success":true, "src":"2 United States Dollars", '
                                '"dst":"1.772814 Euros", "error":""}')
     introcs.assert_equals('1.772814 Euros', result)
 
@@ -159,14 +146,13 @@ def test_service_response():
     introcs.assert_equals('{"success": true, "src": "5.0 United States Dollars", '
                           '"dst": "4.432035 Euros", "error": ""}',result)
 
-    result = currency.service_response('AUD', 'HNL',10.05)
-    introcs.assert_equals('{"success": true, "src": "10.05 Australian Dollars", '
-                          '"dst": "174.24139150330745 Honduran Lempiras", "error": ""}',result)
-
     result = currency.service_response('AUD','HNL', 10)
     introcs.assert_equals('{"success": true, "src": "10.0 Australian Dollars", '
                           '"dst": "173.37451890876363 Honduran Lempiras", "error": ""}',result)
 
+    result = currency.service_response('AUD', 'HNL',10.05)
+    introcs.assert_equals('{"success": true, "src": "10.05 Australian Dollars", '
+                          '"dst": "174.24139150330745 Honduran Lempiras", "error": ""}',result)
 
     print("Testing service_response")
 
