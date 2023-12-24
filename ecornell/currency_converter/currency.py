@@ -145,6 +145,10 @@ def get_dst():
     Precondition: json a string provided by the web service (ONLY enforce the type)
     """
 
+    assert type(json) == str, 'The value ' + repr(json) + ' is not a string.'
+    assert introcs.count_str(json, '"dst"') == 1, \
+        'The json string ' + repr(json) + ' does not have an dst substring'
+
     # similar to src just for dst value
     position = introcs.index_str(json, '"dst"')
     substring = first_inside_quotes(json[position+5:])
@@ -183,3 +187,31 @@ def has_error(json):
     check = substring != ''
 
     return check
+
+def service_response(src,dst,amt):
+    """
+    Returns a JSON string that is a response to a currency query.
+
+    A currency query converts amt money in currency src to the currency dst. The response
+    should be a string of the form
+
+        '{"success": true, "src": "<src-amount>", "dst": "<dst-amount>", "error": ""}'
+
+    where the values src-amount and dst-amount contain the value and name for the src
+    and dst currencies, respectively. If the query is invalid, both src-amount and
+    dst-amount will be empty, and the error message will not be empty.
+
+    There may or may not be spaces after the colon.  To test this function, you should
+    choose specific examples from your web browser.
+
+    Parameter src: the currency on hand
+    Precondition: src is a nonempty string with only letters
+
+    Parameter dst: the currency to convert to
+    Precondition: dst is a nonempty string with only letters
+
+    Parameter amt: amount of currency to convert
+    Precondition: amt is a float or int
+    """
+
+    pass
