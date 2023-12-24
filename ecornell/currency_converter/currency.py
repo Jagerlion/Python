@@ -107,6 +107,9 @@ def get_src(json):
     Parameter json: a json string to parse
     Precondition: json a string provided by the web service (ONLY enforce the type)
     """
+    assert type(json) == str, 'The value ' + repr(json) + ' is not a string.'
+    assert introcs.count_str(json, '"src"') == 1, \
+        'The json string ' + repr(json) + ' does not have an src substring'
 
     # index the position of "src" as this will be in the json stri ng
     position = introcs.index_str(json, '"src"')
@@ -174,3 +177,9 @@ def has_error(json):
     Precondition: json a string provided by the web service (ONLY enforce the type)
     """
 
+    # finding substring for error
+    position = introcs.index_str(json, '"error"')
+    substring = first_inside_quotes(json[position+7:])
+    check = substring != ''
+
+    return check
