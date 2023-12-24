@@ -160,17 +160,17 @@ def test_service_response():
     introcs.assert_equals('{"success": true, "src": "2.5 United States Dollars", '
                           '"dst": "2.2160175 Euros", "error": ""}',result)
 
-    result = currency.service_response('USD','EUR',5)
-    introcs.assert_equals('{"success": true, "src": "5.0 United States Dollars", '
-                          '"dst": "4.432035 Euros", "error": ""}',result)
+    result = currency.service_response('VVV','EUR',5)
+    introcs.assert_equals('{"success": false, "src": "", '
+                          '"dst": "", "error": "The rate for currency VVV is not present."}',result)
 
     result = currency.service_response('GEL','AUD', -1)
     introcs.assert_equals('{"success": true, "src": "-1.0 Georgian Lari", '
                           '"dst": "-0.501537323943662 Australian Dollars", "error": ""}',result)
 
-    result = currency.service_response('AUD', 'HNL',10.05)
-    introcs.assert_equals('{"success": true, "src": "10.05 Australian Dollars", '
-                          '"dst": "174.24139150330745 Honduran Lempiras", "error": ""}',result)
+    result = currency.service_response('AUD', 'RRR',10.05)
+    introcs.assert_equals('{"success": false, "src": "", '
+                          '"dst": "", "error": "The rate for currency RRR is not present."}',result)
 
     print("Testing service_response")
 
