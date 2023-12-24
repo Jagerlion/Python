@@ -67,4 +67,12 @@ def first_inside_quotes(s):
     Precondition: s is a string with at least two (double) quote characters inside
     """
 
-    pass
+    # find first double quote position in string
+    first = introcs.find_str(s,'"')
+    # Search for the second qutation after the first
+    second = introcs.find_str(s[first+1:],'"')
+    # combining positions
+    result = s[first+1:1+second+first]
+
+    return result
+
