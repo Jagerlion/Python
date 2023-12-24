@@ -1,20 +1,18 @@
 """
-Initial module for currency exchange.
+Module for currency exchange
 
 This module provides several string parsing functions to implement a simple
 currency exchange routine using an online currency service. The primary function
 in this module is exchange().
 
 Author: Bryan Ruiz
-Date: 12/11/2023
+Date: 12/18/2023
 """
-
-# passkey 3QQ4lj7Xif2fXphELw8AERBvzN1jJi3gB0JAIsUPDuEe
+#project key 3QQ4lj7Xif2fXphELw8AERBvzN1jJi3gB0JAIsUPDuEe
 
 import introcs
 
 APIKEY = '3QQ4lj7Xif2fXphELw8AERBvzN1jJi3gB0JAIsUPDuEe'
-
 
 def before_space(s):
     """
@@ -27,9 +25,10 @@ def before_space(s):
     """
 
     assert type(s) == str, 'The value ' + repr(s) + ' is not a string.'
-    assert introcs.count_str(s, ' ') >= 1, 'The string ' + repr(s) + ' does not have at least one space.'
+    assert introcs.count_str(s,' ') >= 1, 'The string '+repr(s)+' does not have at least one space.'
 
-    first = introcs.find_str(s, ' ')
+
+    first = introcs.find_str(s,' ')
     result = s[:first]
 
     return result
@@ -44,11 +43,12 @@ def after_space(s):
     Parameter s: the string to slice
     Precondition: s is a string with at least one space in it
     """
+
     assert type(s) == str, 'The value ' + repr(s) + ' is not a string.'
-    assert introcs.count_str(s, ' ') >= 1, 'The string ' + repr(s) + ' does not have at least one space.'
+    assert introcs.count_str(s,' ') >= 1, 'The string '+repr(s)+' does not have at least one space.'
 
     first = introcs.find_str(s, ' ')
-    result = s[first + 1:]
+    result = s[first+1:]
 
     return result
 
@@ -57,26 +57,25 @@ def first_inside_quotes(s):
     """
     Returns the first substring of s between two (double) quote characters
 
-    Note that the double quotes must be part of the string.  So "Hello World" is a 
+    Note that the double quotes must be part of the string.  So "Hello World" is a
     precondition violation, since there are no double quotes inside the string.
 
     Example: first_inside_quotes('A "B C" D') returns 'B C'
-    Example: first_inside_quotes('A "B C" D "E F" G') returns 'B C', because it only 
+    Example: first_inside_quotes('A "B C" D "E F" G') returns 'B C', because it only
     picks the first such substring.
 
     Parameter s: a string to search
     Precondition: s is a string with at least two (double) quote characters inside
     """
-
     assert type(s) == str, 'The value ' + repr(s) + ' is not a string.'
-    assert introcs.count_str(s, '"') >= 2, 'The string ' + repr(s) + ' does not have at least two double quotes.'
+    assert introcs.count_str(s,'"') >= 2, 'The string '+repr(s)+' does not have at least two double quotes.'
 
     # find first double quote position in string
-    first = introcs.find_str(s, '"')
+    first = introcs.find_str(s,'"')
     # Search for the second qutation after the first
-    second = introcs.find_str(s[first + 1:], '"')
+    second = introcs.find_str(s[first+1:],'"')
     # combining positions
-    result = s[first + 1:1 + second + first]
+    result = s[first+1:1+second+first]
 
     return result
 
@@ -107,16 +106,18 @@ def get_src(json):
     Parameter json: a json string to parse
     Precondition: json a string provided by the web service (ONLY enforce the type)
     """
+
     assert type(json) == str, 'The value ' + repr(json) + ' is not a string.'
     assert introcs.count_str(json, '"src"') == 1, \
         'The json string ' + repr(json) + ' does not have an src substring'
 
-    # index the position of "src" as this will be in the json stri ng
+    # index the position of "src" as this will be in the json string
     position = introcs.index_str(json, '"src"')
     # use first_inside_quotes after finding src position to pull substring
     substring = first_inside_quotes(json[position+5:])
 
     return substring
+
 
 def get_dst(json):
     """
@@ -155,6 +156,7 @@ def get_dst(json):
 
     return substring
 
+
 def has_error(json):
     """
     Returns True if the response to a currency query encountered an error.
@@ -181,12 +183,15 @@ def has_error(json):
     Precondition: json a string provided by the web service (ONLY enforce the type)
     """
 
+
     # finding substring for error
     position = introcs.index_str(json, '"error"')
     substring = first_inside_quotes(json[position+7:])
+    #  boolean check, if there is an error returns True
     check = substring != ''
 
     return check
+
 
 def service_response(src,dst,amt):
     """
@@ -223,13 +228,15 @@ def service_response(src,dst,amt):
     assert len(dst) > 0, 'dst must be a non empty string'
 
     assert type(amt) != str, 'amt is a string and not a float or integer'
-    assert introcs.isfloat(str(amt)) or introcs.isint(str(amt)), 'amt is not a float or int'
+    assert introcs.isfloat(str(amt)) or introcs.isint(str(amt)), 'amt is not a float or integer'
+
 
     url = ('https://ecpyfac.ecornell.com/python/currency/'
            'fixed?src='+src+'&dst='+dst+'&amt='+str(amt)+'&key=3QQ4lj7Xif2fXphELw8AERBvzN1jJi3gB0JAIsUPDuEe')
     result = introcs.urlread(url)
 
     return result
+
 
 def iscurrency(currency):
     """
@@ -240,7 +247,6 @@ def iscurrency(currency):
     Parameter currency: the currency code to verify
     Precondition: currency is a nonempty string with only letters
     """
-
     assert type(currency) == str, 'The currency value' + repr(currency) + ' is not a string.'
     assert introcs.isalpha(currency) == True, 'currency has non alphabetic characters'
     assert len(currency) > 0, 'The string '+ repr(currency) + ' must not be an empty string'
@@ -253,13 +259,13 @@ def iscurrency(currency):
 
     return check
 
+
 def exchange(src, dst, amt):
     """
     Returns the amount of currency received in the given exchange.
 
     In this exchange, the user is changing amt money in currency src to the currency
     dst. The value returned represents the amount in currency currency_to.
-
     The value returned has type float.
 
     Parameter src: the currency on hand
@@ -278,6 +284,7 @@ def exchange(src, dst, amt):
     assert type(amt) != str, 'amt is a string and not a float or integer'
     assert introcs.isfloat(str(amt)) or introcs.isint(str(amt)), 'amt is not a float or integer'
 
+
     # get the json using service_response
     json = service_response(src, dst, amt)
     # get the dst using get_dst
@@ -287,4 +294,3 @@ def exchange(src, dst, amt):
     value = float(before_space(converted))
 
     return value
-

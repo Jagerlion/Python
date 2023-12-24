@@ -123,7 +123,8 @@ def test_has_error():
     Test procedure for has_error
     """
 
-    result = currency.has_error('{"success":false,"src":"","dst":"","error":"Source currency code is invalid."}')
+    result = currency.has_error('{"success":false,"src":"","dst":"",'
+                                '"error":"Source currency code is invalid."}')
     introcs.assert_true(result)
 
     result = currency.has_error('{"success": true, "src": "2 United States Dollars", '
