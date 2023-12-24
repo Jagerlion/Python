@@ -95,6 +95,18 @@ def test_get_src():
     """
     Test procedure for get_src
     """
+    result = currency.get_src('{"success": true, "src": "2 United States Dollars", '
+                              '"dst": "1.772814 Euros", "error": ""}')
+    introcs.assert_equals('2 United States Dollars',result)
+
+    result = currency.get_src('{"success":true, "src":"2 United States Dollars", '
+                               '"dst":"1.772814 Euros", "error":""}')
+    introcs.assert_equals('2 United States Dollars', result)
+
+    result = currency.get_src('{"success":true, "src":"test", '
+                               '"dst":"1.772814 Euros", "error":""}')
+    introcs.assert_equals('test', result)
+
     print("Testing get_src")
 
 
