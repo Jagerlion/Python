@@ -23,4 +23,11 @@ def first_vowel(s):
     Parameter s: the string to search
     Precondition: s is a nonempty string with only lowercase letters
     """
-    pass
+
+    result = len(s)     #  In case there is no 'a'
+
+    if something:
+        do something
+
+    return result
+
