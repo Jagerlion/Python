@@ -1,5 +1,5 @@
 """
-A test script to test the module funcs.py
+A test script to test the module func.py
 
 Author: Bryan Ruiz
 Date: 11/26/2023
