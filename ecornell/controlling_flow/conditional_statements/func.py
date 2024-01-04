@@ -29,8 +29,8 @@ def first_vowel(s):
     if 'a' in s:
         result = introcs.find_str(s, 'a')
 
-    if 'e' in s and result >= 1:
-        result = introcs.find_str(s, 'e')
+    if 'e' in s and introcs.index_str(s, 'e') < result:
+        result = introcs.index_str(s, 'e')
 
     return result
 
