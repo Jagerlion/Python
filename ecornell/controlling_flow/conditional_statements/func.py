@@ -26,8 +26,8 @@ def first_vowel(s):
 
     result = len(s)  # In case there is no 'a'
 
-    if 'a' in s:
-        result = introcs.find_str(s, 'a') + 1
+    if 'a' in s and introcs.find_str(s, 'a') < result:
+        result = introcs.find_str(s, 'a')
 
     if 'e' in s and introcs.index_str(s, 'e') < result:
         result = introcs.index_str(s, 'e')
@@ -40,13 +40,10 @@ def first_vowel(s):
 
     if 'u' in s and introcs.index_str(s, 'u') < result:
         result = introcs.index_str(s, 'u')
+        print(result)
 
-    if 'y' in s and introcs.index_str(s, 'y') > 0:
+    if 'y' in s[0:] and introcs
         result = introcs.index_str(s, 'y') + 1
 
-
-    # y is in string first
-    # then whether or not y is found after the first position
-
-
     return result
+
