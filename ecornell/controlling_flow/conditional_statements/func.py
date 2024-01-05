@@ -1,8 +1,8 @@
 """
 A function to search for the first vowel position
 
-Author: YOUR NAME HERE
-Date: THE DATE HERE
+Author: Bryan Ruiz
+Date: 01/05/2024
 """
 import introcs
 
@@ -41,7 +41,7 @@ def first_vowel(s):
     if 'u' in s and introcs.index_str(s, 'u') < result:
         result = introcs.index_str(s, 'u')
 
-    if 'y' in s and introcs.index_str(s, 'y') > 0 and introcs.index_str(s, 'y') < result:
-        result = introcs.index_str(s, 'y')
+    if introcs.find_str(s, 'y', 1) > 0 and introcs.index_str(s, 'y') < result:
+        result = introcs.index_str(s, 'y', 1)
 
     return result
