@@ -50,7 +50,7 @@ def power_trip():
 
     # this is where the code goes
     global number1
-    number1 = 1
+    number1 = 4.0
 
     # return will , spit out whatever calculated value is for this function
     return number1
@@ -63,4 +63,7 @@ def power_trip():
 # ex: filename.function_name(variable, parameter)
 
 
-fundumentals.power_trip()
+a = power_trip()
+print(a)
+
+hello.wallie('test')
