@@ -14,7 +14,17 @@ def wallie(s):
     """
 
     # str makes a variable a string
-    value1 = str(s)
-    value1 = 'Hello wallie'
 
-    return value1
+    print('Hello')
+
+
+def addition(n):
+    """
+    Adds one to an integer that is inputted
+
+    n must be an integer
+    """
+
+    result = int(n) + 1
+    return result
+

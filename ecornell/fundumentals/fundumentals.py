@@ -4,6 +4,9 @@ Author: Bryan Ruiz
 Date: 01/19/2024
 """
 
+# importing, just like it sounds, pulls a file into the code.
+import hello
+
 # float is a number with decmials, it is not a whole number in other words
 number1 = 3.1452525
 number2 = 5353.434
@@ -66,4 +69,10 @@ def power_trip():
 a = power_trip()
 print(a)
 
-hello.wallie('test')
+# you MUST import the file first
+hello.wallie('string')
+hello.wallie(2)
+
+
+potato = hello.addition(1)
+print(potato)
