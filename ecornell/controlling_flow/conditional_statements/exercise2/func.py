@@ -45,7 +45,7 @@ def extract_name(s):
         result = s[first+1:second]
 
     else:
-        second =w introcs.find_str(s, '.')
+        second = introcs.find_str(s, '.')
         result = s[:second]
 
     return result
