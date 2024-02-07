@@ -2,7 +2,7 @@
 A function to search for the first vowel position
 
 Author: Bryan Ruiz
-Date: 01/05/2024
+Date: 02/07/2024
 """
 import introcs
 
