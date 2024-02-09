@@ -35,8 +35,8 @@ def extract_name(s):
 
     if introcs.find_str(s, '@megacorp.com') > 0:
         second = introcs.find_str(s, '@')
-        first = introcs.find_str(s, '.')
-        result = s[first + 1:second]
+        first = introcs.find_str(s,'.')
+        result = s[first+1:second]
 
     else:
         second = introcs.find_str(s, '.')
