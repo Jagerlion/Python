@@ -38,3 +38,8 @@ def extract_name(s):
         first = introcs.find_str(s, '.')
         result = s[first + 1:second]
 
+    else:
+        second = introcs.find_str(s, '.')
+        result = s[:second]
+
+    return result
