@@ -1,8 +1,8 @@
 """
 A function to extract names from e-mail addresses.
 
-Author: YOUR NAME HERE
-Date: THE DATE HERE
+Author: Bryan Ruiz
+Date: 02/26/2024
 """
 import introcs
 
