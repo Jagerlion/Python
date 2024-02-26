@@ -41,6 +41,11 @@ def extract_name(s):
         first = introcs.find_str(s,'.')
         result = s[first+1:second]
 
+    elif introcs.find_str(s, '@consultant.biz') > 0:
+        first = introcs.find_str(s,'.')
+        second = introcs.find_str(s, '.', first+1)
+        result = s[first+1:second]
+
     else:
         second = introcs.find_str(s, '.')
         result = s[:second]
