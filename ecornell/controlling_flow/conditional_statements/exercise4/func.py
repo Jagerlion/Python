@@ -44,4 +44,4 @@ def first_vowel(s):
     if introcs.find_str(s, 'y', 1) > 0 and introcs.index_str(s, 'y') < result:
         result = introcs.index_str(s, 'y', 1)
 
-    return result
+    return result if result < len(s) else -1
