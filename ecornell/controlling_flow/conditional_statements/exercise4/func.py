@@ -23,4 +23,25 @@ def first_vowel(s):
     Parameter s: the string to search
     Precondition: s is a nonempty string with only lowercase letters
     """
-    pass
+
+    result = len(s)  # In case there is no 'a'
+
+    if 'a' in s and introcs.index_str(s, 'a') < result:
+        result = introcs.index_str(s, 'a')
+
+    if 'e' in s and introcs.index_str(s, 'e') < result:
+        result = introcs.index_str(s, 'e')
+
+    if 'i' in s and introcs.index_str(s, 'i') < result:
+        result = introcs.index_str(s, 'i')
+
+    if 'o' in s and introcs.index_str(s, 'o') < result:
+        result = introcs.index_str(s, 'o')
+
+    if 'u' in s and introcs.index_str(s, 'u') < result:
+        result = introcs.index_str(s, 'u')
+
+    if introcs.find_str(s, 'y', 1) > 0 and introcs.index_str(s, 'y') < result:
+        result = introcs.index_str(s, 'y', 1)
+
+    return result if result < len(s) else -1
