@@ -7,7 +7,7 @@ Author: Walker M White
 Date: March 30, 2019
 """
 
-def aanglicize(n):
+def anglicize(n):
     """
     Returns: English equivalent of n.
 
@@ -23,4 +23,20 @@ def aanglicize(n):
     Precondition: 0 < n < 1,000,000
     """
 
-    pass
+    if n < 1000:
+        return anglicize1000(n)
+
+    # n >= 1000
+    # conditional expression to get number 1...999
+    if n % 1000 == 0:
+        suffix = ''
+    else:
+        suffix = ' '+anglicize1000(n % 1000)
+    return (anglicize1000(n//1000) + ' thousand'+ suffix)
+
+def anglicize1000(n):
+    """
+    Return anglicize of numbers between 0<n<1000
+    """
+
+
