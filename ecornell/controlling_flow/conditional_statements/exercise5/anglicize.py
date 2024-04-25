@@ -39,4 +39,14 @@ def anglicize1000(n):
     Return anglicize of numbers between 0<n<1000
     """
 
+    if n < 20:
+        return anglicize1to19(n)
+    elif n < 100:
+        # n >== 20
+        return anglicize20to99(n)
+    else:
+        # n >== 100
+    return anglicize100to999(n)
+
+
 
