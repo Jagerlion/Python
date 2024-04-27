@@ -30,4 +30,29 @@ def valid_format(s):
     Parameter s: the string to check
     Precondition: s is nonempty string with no more than 7 characters
     """
-    pass
+
+    # find the length of s string
+
+    length = len(s)
+    # print(length)
+
+    if s[0] == '0' and length > 1:
+        return False
+
+    elif length <= 3:
+
+        return introcs.isint(s)
+
+    elif ',' in s and length > 3:
+
+        result = introcs.index_str(s, ',')
+
+        # index of comma staring from the right
+        comma_pos = length - result - 1
+
+        # Checks the last 3 characters are digits before checking characters in front of the comma
+        if comma_pos == 3 and introcs.isint(s[result + 1:]):
+
+            return introcs.isint(s[:result])
+
+    return False
